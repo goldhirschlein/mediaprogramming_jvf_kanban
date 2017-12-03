@@ -1,10 +1,23 @@
 describe Category, :type => :model do
-  it "is should have a name" do
-    Category.create(name: 'Rails Project')
+  subject { described_class.new(name: "category_name") }
+
+  describe "Validations" do
+    it "is valid with valid attributes" do
+      expect(subject).to be_valid
+    end
+
+    it "is not valid without a name" do
+      subject.name = nil
+      expect(subject).to_not be_valid
+    end
   end
-  it "has many tasks" do
-    have_many :tasks
+
+  describe "Associations" do
+    it "has many tasks" do
+      have_many :tasks
+    end
   end
+
 end
 
 
