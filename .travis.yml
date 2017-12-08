@@ -3,9 +3,9 @@ rvm:
 - 2.4
 
 script:
-  - bundle exec rails db:migrate
-  - bundle exec rails db:migrate RAILS_ENV=test
-  - bundle exec rails rspec spec
+- bundle exec rails db:migrate
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rspec spec
 
 deploy:
   provider: heroku
@@ -14,3 +14,4 @@ deploy:
   app: kanban-jvf
   on:
     repo: goldhirschlein/mediaprogramming_jvf_kanban
+  run:  bundle exec rails db:migrate  

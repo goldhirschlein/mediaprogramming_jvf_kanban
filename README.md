@@ -23,6 +23,7 @@ Things you may want to cover:
 
 * ...
 
+WEEK 3
 RSPEC:
 
 - atom .
@@ -42,3 +43,17 @@ require 'rspec/rails'
 require 'rspec/autorun'
 
 - added test to categrory.rb & task.rb
+- wrote tests in categrory.rb & task.rb
+- set up travis.yml
+- added language and version to travis.yml
+
+WEEK 4
+DEPLOYMENT:
+
+- added gem pg in group :production do
+- used julia's heroku account and connected github project with heroku
+- gem install travis
+- inserted lines for deploy: in travis.yml
+- travis setup heroku (for API key from heruko)
+- rails db:migrate
+- added lines for script: in travis.yml
