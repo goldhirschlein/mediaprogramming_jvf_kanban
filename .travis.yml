@@ -1,3 +1,10 @@
 language: ruby
 rvm:
- - 2.4
+- 2.4
+deploy:
+  provider: heroku
+  api_key:
+    secure: Hg46gMa+20ZLo860orTS6D/Q+bJj+z2fnpEaDMcWoQKTawQvTrN/uO1wMgWzKdZ229qOmcRA0p9ZwP38jzu7mjtQyRXVES+DdadkkRj1nwEGjVf5XeWwLZVAFiTNvftEh17fVGJAnpye/2/fPncc0+oVy2KLz77LzPYB+tS3dh6L3SiHqa8MymsCXyqG9UWmFiBMxHVMIi2lEY2SxHGGZb4R9XuCZhpCwuPle5PWUWucR9427SgQXcoXxww0qs95xWqg0u5I2s0vM8vRye7sfp39ggFBwn0PG8ITIddIaLeHZM3L0axmf8cl9W8bbSbe3ok9KSV2CbCCRseMgHLa726QyYwbVMY9D7q025Zr51KvBsfzAQMnwn2m5aM/DjlpWBOdInHUYm2zWme5mxX6Qfc2npi6tGjJjHMUMwBZdben7u2UJqesEBQM5OZ0te1zK6TelLbPmyn+mDVM2tw3IErLmqbmRkf321kQoqeVm8Gk7iZ+xSI/PqC5crgs9xn/vaqGYooS59JNJ0zKXQhDWy3IMmaajTzRq+uO2Bu2HP7lMxtdJ1FhJ2Oo4Hbdxa3wX7fn5SQxtUFkz7tVGxm7GkSvBkqrP4kRetqb0so+FMyrj6y2CDAAOjquPXsbweS9CeXmUO3QMU5rj0mI9h4+3Y8tyi620rUF3JxLEQEHgI8=
+  app: kanban-jvf
+  on:
+    repo: goldhirschlein/mediaprogramming_jvf_kanban
