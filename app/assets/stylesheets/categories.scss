@@ -1,3 +1,39 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td{
+  vertical-align: top;
+  max-width: 200px;
+}
+
+#category-header{
+  color:#ffffff;
+  background-color: #76B900;
+}
+
+#category-name{
+  padding: 20px;
+  width: 100%;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#task-name{
+  width: 100%;
+  font-weight: bold;
+}
+
+#category-body{
+  background-color: #efefef;
+}
+
+#vertical-spacing{
+  height: 20px;
+  width: 100%;
+  background-color: #efefef;
+}

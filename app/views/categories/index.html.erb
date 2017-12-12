@@ -1,35 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<h1>Kanban Board</h1>
 
 <table>
+  <!--
   <thead>
     <tr>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
+-->
 
   <tbody>
+    <tr>
     <% @categories.each do |category| %>
+    <td>
+      <table>
+        <thead id="category-header">
       <tr>
-        <td><%= category.name %></td>
+        <td id="category-name"><%= category.name %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    </thead>
+    <tbody id="category-body">
       <tr>
         <td colspan="4">
           <table>
             <tbody>
+                <tr id="vertical-spacing"></tr>
               <% category.tasks.each do |task| %>
                 <% if task.published %>
                   <tr>
-                    <td><%= task.name %></td>
+                    <td id="task-name"><%= task.name %></td>
                     <td><%= link_to 'Show', task %></td>
                     <td><%= link_to 'Edit', edit_task_path(task) %></td>
                     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
+                  <tr>
+                    <td><%= task.description %></td>
+                  </tr>
+                  <tr id="vertical-spacing"></tr>
                 <% end %>
               <% end %>
               <tr>
@@ -39,7 +52,11 @@
         </table>
         </td>
       </tr>
+    </tbody>
+    </table>
+    </td>
     <% end %>
+  </tr>
   </tbody>
 </table>
 
