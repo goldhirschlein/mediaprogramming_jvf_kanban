@@ -32,13 +32,17 @@
                 <tr id="vertical-spacing"></tr>
               <% category.tasks.each do |task| %>
                 <% if task.published %>
-                  <tr>
-                    <td id="task-name"><button onclick="showTask()"><%= task.name %></button></td>
+                  <tr id="task-name" onCLick="showTask(this, <%= task.id %>)">
+                    <td class="task-name"><%= task.name %></td>
                   </tr>
-                  <tr id="task-content">
-                    <td><%= task.description %></td>
-                    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-                    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <tr id="task-content-<%= task.id %>" style="display:none" class="task-content">
+                    <td class="task-content">
+                      <%= task.description %>
+                      <div id="menu">
+                        <%= link_to 'Edit', edit_task_path(task) %>
+                        <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </div>
+                    </td>
                   </tr>
                   <tr id="vertical-spacing"></tr>
                 <% end %>

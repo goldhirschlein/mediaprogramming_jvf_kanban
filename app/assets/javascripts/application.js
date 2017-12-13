@@ -14,12 +14,19 @@
 //= require turbolinks
 //= require_tree .
 
-function showTask() {
-  console.log("blah")
-    var x = document.getElementById("task-content");
+function showTask(task, id) {
+  var parent = task.parentElement;
+  var x = parent.querySelector("#task-content-" + id);
+
+  if(x != null){
     if (x.style.display === "none") {
-        x.style.display = "block";
+      console.log("show task " + id);
+      x.style.display = "table-row";
     } else {
-        x.style.display = "none";
+      console.log("hide task " + id);
+      x.style.display = "none";
     }
+  } else {
+    console.log("couldn't find task content");
+  }
 }
