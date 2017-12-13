@@ -20,7 +20,6 @@
         <thead id="category-header">
       <tr>
         <td id="category-name"><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -34,13 +33,12 @@
               <% category.tasks.each do |task| %>
                 <% if task.published %>
                   <tr>
-                    <td id="task-name"><%= task.name %></td>
-                    <td><%= link_to 'Show', task %></td>
+                    <td id="task-name"><button onclick="showTask"><%= task.name %></button></td>
+                  </tr>
+                  <tr id="task-content">
+                    <td><%= task.description %></td>
                     <td><%= link_to 'Edit', edit_task_path(task) %></td>
                     <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                  </tr>
-                  <tr>
-                    <td><%= task.description %></td>
                   </tr>
                   <tr id="vertical-spacing"></tr>
                 <% end %>
