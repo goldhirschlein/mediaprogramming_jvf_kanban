@@ -33,7 +33,7 @@
               <% category.tasks.each do |task| %>
                 <% if task.published %>
                   <tr>
-                    <td id="task-name"><button onclick="showTask"><%= task.name %></button></td>
+                    <td id="task-name"><button onclick="showTask()"><%= task.name %></button></td>
                   </tr>
                   <tr id="task-content">
                     <td><%= task.description %></td>
