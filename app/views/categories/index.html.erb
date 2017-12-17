@@ -32,7 +32,7 @@
                 <tr id="vertical-spacing"></tr>
               <% category.tasks.each do |task| %>
                 <% if task.published %>
-                  <tr id="task-name" onCLick="showTask(this, <%= task.id %>)">
+                  <tr id="task-name" onCLick="showTask(<%= task.id %>)">
                     <td class="task-name"><%= task.name %></td>
                   </tr>
                   <tr id="task-content-<%= task.id %>" style="display:none" class="task-content">

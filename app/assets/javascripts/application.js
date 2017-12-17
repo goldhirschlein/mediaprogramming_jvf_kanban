@@ -14,9 +14,8 @@
 //= require turbolinks
 //= require_tree .
 
-function showTask(task, id) {
-  var parent = task.parentElement;
-  var x = parent.querySelector("#task-content-" + id);
+function showTask(id) {
+  var x = document.getElementById("task-content-" + id);
 
   if(x != null){
     if (x.style.display === "none") {
